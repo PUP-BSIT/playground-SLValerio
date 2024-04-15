@@ -1,0 +1,12 @@
+.try {
+    background-color: red;
+    font-size: 9em;
+}
+
+#name, button {
+    font-size: 5em;
+}
+
+p {
+    font-size: 3em;
+}

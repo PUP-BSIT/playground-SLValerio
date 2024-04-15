@@ -1,0 +1,9 @@
+.try {
+    background-color: green;
+    font-size: 9em;
+}
+
+:host {
+    color: beige;
+}
+  

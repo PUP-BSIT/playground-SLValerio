@@ -1,0 +1,5 @@
+<h1 class="try">EYOW! {{ username }}!</h1>
+<input id="name" [value]="username" [(ngModel)]="username"/>
+<button (click)="onSubmit($event)">SUBMIT</button>
+<p>{{ message }}</p>
+<app-test></app-test>
