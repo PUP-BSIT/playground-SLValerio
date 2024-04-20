@@ -1,0 +1,6 @@
+<app-child 
+    [message]="messageToChild"
+    (greet)="response = $event">
+</app-child>
+<p>A Message from child: {{ response }}</p>
+

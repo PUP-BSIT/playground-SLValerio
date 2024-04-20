@@ -1,0 +1,65 @@
+<!--<div [ngClass]="myClass">
+	My First Div
+</div>
+
+<div [ngClass]="myClasses">
+	My Second Div
+</div>
+
+ <div [ngClass]="{ active: isActive }">My Username</div> 
+
+<div [ngClass]="{ active: isActive }">ngClass Directive</div>-->
+
+<div [class.active]="isActive">Class Binding</div> 
+
+<div [ngClass]="{ active: isActive, inactive: !isActive }">
+	Are you logged in?</div>
+<button (click)="isActive = true" *ngIf="isLoggedIn">Activate</button>
+<button (click)="isActive = false" *ngIf="isLoggedIn">Deactivate</button>
+
+<div *ngIf="isLoggedIn; else loggedOut">
+    Welcome user!
+</div>
+<ng-template #loggedOut>
+    Please login.
+</ng-template>
+
+<ul>
+	<li *ngFor="let student of students">{{ student }}</li>
+</ul>
+  
+
+<!-- ACTIVITY 1 -->
+<table>
+	<thead>
+		<th>ID</th>
+		<th>Subject Code</th>
+		<th>Subject Name</th>
+		<th>No of Units</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let subject of subjects">
+			<td>{{ subject.id }}</td>
+			<td>{{ subject.subject_code }}</td>
+			<td>{{ subject.subject_name }}</td>
+			<td>{{ subject.no_of_units }}</td>
+		</tr>
+	</tbody>
+</table>
+
+<!-- END OF ACTIVITY 1 -->
+
+<div [ngSwitch]="day">
+	<div *ngSwitchCase="0">Sunday</div>
+	<div *ngSwitchCase="1">Monday</div>
+	<div *ngSwitchCase="2">Tuesday</div>
+	<div *ngSwitchCase="3">Wednesday</div>
+	<div *ngSwitchCase="4">Thursday</div>
+	<div *ngSwitchCase="5">Friday</div>
+	<div *ngSwitchCase="6">Saturdar</div>
+</div>
+  
+
+<app-parent></app-parent>
+
+<p>This is root component ~ o ~</p>

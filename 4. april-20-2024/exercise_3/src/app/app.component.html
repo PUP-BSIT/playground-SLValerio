@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3</title>
+</head>
+<body>
+  <h1>Basic Calculator</h1>
+  <form>
+    <input id="operand_1" label="Operand 1" [value]="operand1"
+      (input)="operand1=$event.target.value" type="number">
+    <input id="operand_2" label="Operand 2" [value]="operand2" 
+      (input)="operand2=$event.target.value" type="number">
+    <button (click)="add($event)">ADD</button>
+    <button (click)="subtract($event)">SUBTRACT</button>
+    <button (click)="multiply($event)">MULTIPLY</button>
+    <button (click)="divide($event)">DIVIDE</button>
+  </form>
+
+  <div id="result">
+    <h2>Result: {{ result }} </h2>
+  </div>
+
+</body>
+</html>
