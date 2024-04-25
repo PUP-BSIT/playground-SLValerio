@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+input {
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+button {
+    max-width: 10%;
+    max-width: 20%;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+</head>
+<body>
+  <h1>Basic Calculator</h1>
+  <form>
+    <input id="operand_1" name="Operand 1" [(ngModel)]="operand1" type="number">
+    <input id="operand_2" name="Operand 2" [(ngModel)]="operand2" type="number">
+    <button (click)="add()">ADD</button>
+    <button (click)="subtract()">SUBTRACT</button>
+    <button (click)="multiply()">MULTIPLY</button>
+    <button (click)="divide()">DIVIDE</button>
+  </form>
+
+  <div id="result">
+    <h2>Result: {{ this.result }} </h2>
+  </div>
+</body>
+</html>
