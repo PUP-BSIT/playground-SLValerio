@@ -1,0 +1,57 @@
+<!--Template Reference Variable-->
+<div #myDiv>My Div</div>
+<button (click)="myDiv.innerHTML = ''">Clear</button>
+<input #myInput (input)="myDiv.innerHTML = $event.target.value" />
+<button (click)="myInput.value = ''">Clear Input</button>
+
+<!--ViewChild Decorator-->
+<input #myInput/>
+<button (click)="logInputValue()">Log</button>
+
+<!--Content Projection using ng-content-->
+<app-alert>Hello, this is Serlans HAHAHA</app-alert>
+
+<!--Dynamic ng-content-->
+<app-alert>Heyow</app-alert>
+<app-alert alertType="primary">Feeeee</app-alert>
+<app-alert alertType="secondary">Faaaaa</app-alert>
+<app-alert alertType="warn">Fooooo</app-alert>
+
+<!--Multi-slot content projection with ng-container-->
+<app-field mode="display">
+  <ng-container class="display-mode">
+    <div>Title: {{ title }}</div>
+  </ng-container>
+  <ng-container class="edit-mode">
+    <label>Title: </label>
+    <input [value]="title" />
+  </ng-container>
+</app-field>
+
+<!--ngOnChanges-->
+<button (click)="pVal = pVal + 1">
+  Step
+</button>
+<app-my-component [myValue]="pVal">
+</app-my-component>
+
+<!--ngOnDestroy-->
+<button (click)="showChild = !showChild">
+Toggle Child
+</button>
+<app-my-component *ngIf="showChild">
+</app-my-component>
+
+<!--Template Control Flow-->
+@if(isShown) { <p>Hello World!</p> }
+<button (click)="isShown = !isShown">
+  Toggle Greetings
+</button>
+
+@for(obj of objects; track obj.id) {
+  <p>
+    <span>{{ obj.id }} - </span>
+    <span>{{ obj.name }}</span>
+  </p>
+  }
+  
