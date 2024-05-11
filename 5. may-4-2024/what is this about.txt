@@ -1,0 +1,7 @@
+This week's lesson is all about Template Reference Variables (TRV),
+Content Objection, and Component Lifecycle.
+
+-ViewChild Decorator
+-ng-content
+-ng-container
+-Componennt Lifecycle Hooks
