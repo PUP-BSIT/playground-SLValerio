@@ -1,0 +1,8 @@
+This week's lesson is about Angular's Reactive Form.
+
+-FormGroup
+-FormControl
+-Validators
+-Error Message
+-FormBuilder
+-Validator Fn
