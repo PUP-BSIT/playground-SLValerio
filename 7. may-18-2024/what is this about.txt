@@ -1,0 +1,7 @@
+This week's lesson is about Service and Dependency Injection.
+
+-Angular Service
+-Dependency Injection
+-Singleton Design Pattern
+-Dependency provider in @NgModule
+-Dependency Levels
