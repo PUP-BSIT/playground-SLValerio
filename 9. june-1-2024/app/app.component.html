@@ -1,0 +1,14 @@
+root element to hahaha
+<button routerLink="/">Punta ka sa root</button>
+<button (click)="navigateToRoot()">Punta ka sa root 2.0</button>
+<button routerLink="/first" [queryParams]="{order: 'asc', page: 1 }">
+  Patingin ng first with query hehe
+</button>
+<button (click)="onButtonClick()">
+  Patingin ng first with query 1 hehe
+</button>
+<button [routerLink]="['/second/', 3]">Tas sa second with id 3</button>
+<button [routerLink]="['/second/', 4]">Tas sa second with id 4</button>
+<a href="third">Link for the third 2</a>
+<a routerLink="fourth">Pang-apat</a>
+<router-outlet/>
